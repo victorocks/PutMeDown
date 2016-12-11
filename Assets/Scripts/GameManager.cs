@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 		if (this.currentState == GameState.PUT_ME_DOWN)
 		{
 			this.currentState = GameState.SHAKE_ME_UP;
-			this.audio.Play();
+			this.GetComponent<AudioSource>().Play();
 		}
 	}
 
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
 			if (timeLeft < 0.0f)
 			{
 				this.currentState = GameState.PUT_ME_DOWN;
-				this.audio.Pause();
+				this.GetComponent<AudioSource>().Pause();
 			}
 		}
 
